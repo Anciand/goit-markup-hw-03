@@ -1,0 +1,363 @@
+/* Main fonts: Roboto - 400(normal text), 700 - headings; 900 - h1; 500 - names in team part
+Raleway 700 - logo */
+/* Main colors:
+header:
+background:  #FFFFFF; logo: #2196F3 + #212121; nav - #212121 + hover/focus - #2196F3; contacts - #757575 + hover/focus - #2196F3;
+hero section: background - #2F303A; h1 - #FFFFFF; button - #2196F3 + text #FFFFFF;
+features section: h3 - #212121; text - #757575;
+works section: h2 - #212121;
+team section: background -  #F5F4FA; h2 - #212121; h3 - #212121; text - #757575; 
+footer: background - #2F303A; logo: #2196F3 + #000000; address text - #FFFFFF; contacts - #757575;
+ */
+
+/* css vars for colors */
+:root {
+  --background: #ffffff;
+  --bacground-sub: #2f303a;
+  --background-sub2: #f5f4fa;
+  --brand-color: #2196f3;
+  --title-text: #212121;
+  --com-text-color: #757575;
+  --btns-sub-color: #f5f4fa;
+  --border-header: #ececec;
+}
+/* fonts for page */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background);
+  color: var(--com-text-color);
+  letter-spacing: 0.03em;
+  font-size: 14px;
+}
+
+/* delete image margin */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* header styles */
+/* class for navigation block */
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+/* main class for logo */
+.logo {
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+/* subclass for Web part */
+.logo-part {
+  color: var(--brand-color);
+}
+/* add color */
+.logo:visited {
+  color: var(--title-text);
+}
+/* margin */
+.site-nav .logo {
+  margin-right: 93px;
+}
+/* nav block */
+/* special class for all lists */
+.for-list {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+/* list items of navigation */
+.nav-item {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  color: var(--title-text);
+}
+.nav-item:hover,
+.nav-item:focus {
+  color: var(--brand-color);
+}
+/* special class for current page */
+.current {
+  color: var(--brand-color);
+}
+/* contacts */
+.contacts-item {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  text-decoration: none;
+  color: var(--com-text-color);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+}
+.contacts-item:hover,
+.contacts-item:focus {
+  color: var(--brand-color);
+}
+
+/* header container */
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  /* outline: 2px solid red; */
+}
+/* border for header */
+.border {
+  border-bottom: 1px solid var(--border-header);
+}
+/* header list position */
+.header-lst {
+  display: flex;
+}
+/* margin for all elements in navigation */
+.header-lst .item:not(:last-child) {
+  margin-right: 50px;
+}
+/* contacts flex position */
+.contacts-lst {
+  display: flex;
+  margin-left: auto;
+}
+/* contacts margin */
+.contacts-lst .item + .item {
+  margin-left: 50px;
+}
+/* all header elements position */
+.header-disp {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+/* --------------------------------- */
+/* Main block */
+/* special section class for main */
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+/* hero section */
+.hero-section {
+  background-color: var(--bacground-sub);
+}
+/* styles for h1 */
+.main-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.35;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--background);
+}
+/* styles for button */
+.order-button {
+  font-weight: 700;
+  font-size: 16px;
+
+  border-radius: 4px;
+  padding: 10px 32px;
+  border: 0;
+
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  font-family: inherit;
+  background-color: var(--brand-color);
+  color: var(--background);
+  cursor: pointer;
+}
+/* potfolio buttons + actions */
+.portfolio-btns {
+  color: var(--title-text);
+  background-color: var(--btns-sub-color);
+}
+.order-button:hover,
+.order-button:focus {
+  color: var(--brand-color);
+  background-color: var(--background);
+}
+.portfolio-btns:hover,
+.portfolio-btns:focus {
+  color: var(--background);
+  background-color: var(--brand-color);
+}
+/* text + btn position */
+.hero-block {
+  text-align: center;
+}
+
+/* --------------------------------- */
+/* features section */
+/* delete padding */
+.features {
+  padding-bottom: 0;
+}
+/* position for features items */
+.feat-lst {
+  display: flex;
+}
+/* margin between items */
+.feat-lst .feat-item:not(:last-child) {
+  margin-right: 30px;
+}
+/* block width */
+.feat-item {
+  width: 270px;
+}
+/* style for section titles - h2 */
+.section-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text);
+}
+/* styles for h3  */
+.sub-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--title-text);
+}
+/* styles for common text */
+.text-describe {
+  margin-top: 0;
+  margin-bottom: 0px;
+
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: var(--com-text-color);
+}
+/* --------------- */
+/* work section */
+.work-lst {
+  display: flex;
+}
+.work-lst .work-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+/* team section */
+.team {
+  background-color: var(--background-sub2);
+}
+/* delete underline from links */
+.proj-lst-links {
+  text-decoration: none;
+}
+/* list of team members */
+.team-lst {
+  display: flex;
+  text-align: center;
+}
+.team-lst .team-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+/* --------------- */
+/* team section cards */
+.card-content {
+  padding: 30px 62px;
+}
+.card-header {
+  text-transform: none;
+}
+.card {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+/* --------------- */
+/* footer */
+.page-footer {
+  background-color: var(--bacground-sub);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.location {
+  text-decoration: none;
+  color: var(--background);
+}
+.location:hover,
+.location:focus {
+  color: var(--brand-color);
+}
+
+.footer-spec:visited {
+  color: var(--background);
+}
+.address-style {
+  font-style: normal;
+}
+.footer-logo {
+  margin-bottom: 20px;
+}
+.footer-lst .contacts-item {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.footer-lst .footer-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+/* --------------- */
+/* portfolio styles */
+/* buttons list */
+.portfolio-btns-lst {
+  display: flex;
+  margin-bottom: 50px;
+  justify-content: center;
+}
+.port-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.card-lst {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-left: -30px;
+  margin-top: -30px;
+  justify-content: center;
+}
+.card-item {
+  /* flex-basis: calc(100% / 3 - 20px); */
+  flex-basis: 370px;
+
+  margin-left: 30px;
+  margin-top: 30px;
+}
+.portfolio-card-content {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+  width: 370px;
+}
