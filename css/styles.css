@@ -36,6 +36,20 @@ img {
   max-width: 100%;
 }
 
+/* hide elements */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 /* header styles */
 /* class for navigation block */
 .site-nav {
@@ -156,6 +170,8 @@ img {
 /* hero section */
 .hero-section {
   background-color: var(--bacground-sub);
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 /* styles for h1 */
 .main-title {
@@ -214,11 +230,12 @@ img {
 /* position for features items */
 .feat-lst {
   display: flex;
+  gap: 30px;
 }
 /* margin between items */
-.feat-lst .feat-item:not(:last-child) {
+/* .feat-lst .feat-item:not(:last-child) {
   margin-right: 30px;
-}
+} */
 /* block width */
 .feat-item {
   width: 270px;
@@ -260,10 +277,11 @@ img {
 /* work section */
 .work-lst {
   display: flex;
+  gap: 30px;
 }
-.work-lst .work-item:not(:last-child) {
+/* .work-lst .work-item:not(:last-child) {
   margin-right: 30px;
-}
+} */
 
 /* team section */
 .team {
@@ -277,20 +295,27 @@ img {
 .team-lst {
   display: flex;
   text-align: center;
+  gap: 30px;
 }
-.team-lst .team-item:not(:last-child) {
+/* .team-lst .team-item:not(:last-child) {
   margin-right: 30px;
-}
+} */
 
 /* --------------- */
 /* team section cards */
 .card-content {
-  padding: 30px 62px;
+  padding: 30px 58px;
+  font-size: 16px;
 }
 .card-header {
   text-transform: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.15;
 }
 .card {
+  background-color: var(--background);
+
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
