@@ -374,18 +374,20 @@ img {
   display: flex;
   flex-wrap: wrap;
 
-  margin-left: -30px;
-  margin-top: -30px;
+  /* margin-left: -30px;
+  margin-top: -30px; */
+  gap: 30px;
   justify-content: center;
 }
 .card-item {
+  flex-basis: calc((100% - 60px) / 3);
   /* flex-basis: calc(100% / 3 - 20px); */
-  flex-basis: 370px;
+  /* flex-basis: 370px;
 
   margin-left: 30px;
-  margin-top: 30px;
+  margin-top: 30px; */
 }
-.card-header2 {
+.card-header-portfolio {
   font-weight: 700;
   font-size: 18px;
   line-height: 36px;
